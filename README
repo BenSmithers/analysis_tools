@@ -1,0 +1,9 @@
+Installation:
+
+git clone <git repo location>
+cd analysis_tools
+pip install -e .
+
+The -e flag allows you to edit the package 
+If using on lxplus you will need to setup this in a python virtual environment 
+
