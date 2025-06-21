@@ -73,10 +73,13 @@ class CalibrationDBInterface:
         }
 
         response = requests.get(url, params=params, headers=headers)
+        print(response, response.json())
         
         if response.status_code != 200:
-            print(response)
-            raise ValueError(f"Unexpected status code in constant request response {response.status_code}, expected 201.")
+            print(response, response.json())
+            raise ValueError(f"Unexpected status code in constant request response {response.status_code}, expected 201. \n"+
+                            str(response.json())
+                            )
         
         calibration_data = response.json()
         timing_offsets_list = calibration_data[0]['data']
