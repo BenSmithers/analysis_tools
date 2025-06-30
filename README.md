@@ -27,7 +27,9 @@ Currently processed for the test database - to be updated when the production da
 is ready. The authentication requires a credential text file ./.wctecaldb.credential 
 to be in the current working directory - more details in the database interface above
 
+## DetectorGeometry
 
+Class to load PMT positions, directions and calculate time of flight.
 
 
 
