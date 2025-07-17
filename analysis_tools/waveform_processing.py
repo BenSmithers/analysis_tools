@@ -127,3 +127,10 @@ class WaveformProcessing:
 
         return t, amp, baseline
 
+def charge_calculation_mPMT_method(wf,peak_sample):
+    #peak sample is the index of the peak in the waveform
+    #this is the value returned by pulse_finding.do_pulse_finding
+    charge = np.sum(wf[peak_sample-5:peak_sample+2])
+    if wf[peak_sample+2]>0:
+        charge+=wf[peak_sample+2]
+    return charge

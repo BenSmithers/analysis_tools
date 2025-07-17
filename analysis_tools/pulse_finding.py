@@ -47,7 +47,7 @@ def do_pulse_finding(waveform, debug=False):
         integral_condition[i] = True
         
         #sufficient period 
-        if (last_index>0) and (index-last_index)<9:
+        if (last_index>0) and (index-last_index)<=20:
             continue
         sufficient_period[i] = True
 
@@ -107,10 +107,10 @@ def do_pulse_finding_vect(wf, debug=False):
     all_indices = []
     for row in pulse_mask:
         peak_indices = np.where(row)[0]
-        last_index =-10
+        last_index =-20
         pulses = []
         for index in peak_indices:
-            if index - last_index >9:
+            if index - last_index >20:
                 pulses.append(index)
                 last_index = index
         all_indices.append(pulses)
