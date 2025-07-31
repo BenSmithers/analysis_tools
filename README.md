@@ -38,4 +38,8 @@ and
 mapping.get_card_pmt_chan_from_slot_pmt_pos(slot_id,pmt_position) returns the card and channel
 The mapping json is located in the package
 
+## DetectorGeometry
+
+Class to load PMT positions, directions and calculate time of flight.
+
 
