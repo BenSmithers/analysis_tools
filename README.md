@@ -42,4 +42,3 @@ The mapping json is located in the package
 
 Class to load PMT positions, directions and calculate time of flight.
 
-
