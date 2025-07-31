@@ -83,5 +83,7 @@ class CalibrationDBInterface:
         
         calibration_data = response.json()
         timing_offsets_list = calibration_data[0]['data']
-        
-        return timing_offsets_list
+        # print(calibration_data)
+        revision_id = calibration_data[0]['revision_id']
+        insert_time = calibration_data[0]['insert_time']
+        return timing_offsets_list, revision_id, insert_time
